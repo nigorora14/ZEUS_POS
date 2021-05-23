@@ -15,6 +15,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Web_POSFE", "Web_POSFE\Web_
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebServiceBlazorCRUD", "WebServiceBlazorCRUD\WebServiceBlazorCRUD.csproj", "{54D9DBF0-8CA8-4F23-8714-D2C026F303A3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebServiceBlazor", "WebServiceBlazor\WebServiceBlazor.csproj", "{BE7F0AF5-5705-441C-8682-1CFB2B6DD0CB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{54D9DBF0-8CA8-4F23-8714-D2C026F303A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{54D9DBF0-8CA8-4F23-8714-D2C026F303A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{54D9DBF0-8CA8-4F23-8714-D2C026F303A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE7F0AF5-5705-441C-8682-1CFB2B6DD0CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE7F0AF5-5705-441C-8682-1CFB2B6DD0CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE7F0AF5-5705-441C-8682-1CFB2B6DD0CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE7F0AF5-5705-441C-8682-1CFB2B6DD0CB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
