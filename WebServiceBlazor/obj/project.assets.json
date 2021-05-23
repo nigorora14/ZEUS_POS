@@ -1527,6 +1527,48 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
+      },
+      "businessEntities/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/businessEntities.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/businessEntities.dll": {}
+        }
+      },
+      "CPEEnvio/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/CPEEnvio.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CPEEnvio.dll": {}
+        }
+      },
+      "CrearXML/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "businessEntities": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CrearXML.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CrearXML.dll": {}
+        }
+      },
+      "Signature/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "businessEntities": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Signature.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Signature.dll": {}
+        }
       }
     }
   },
@@ -5837,13 +5879,37 @@
         "system.xml.xmlserializer.4.3.0.nupkg.sha512",
         "system.xml.xmlserializer.nuspec"
       ]
+    },
+    "businessEntities/1.0.0": {
+      "type": "project",
+      "path": "../businessEntities/businessEntities.csproj",
+      "msbuildProject": "../businessEntities/businessEntities.csproj"
+    },
+    "CPEEnvio/1.0.0": {
+      "type": "project",
+      "path": "../CPEEnvio/CPEEnvio.vbproj",
+      "msbuildProject": "../CPEEnvio/CPEEnvio.vbproj"
+    },
+    "CrearXML/1.0.0": {
+      "type": "project",
+      "path": "../CrearXML/CrearXML.vbproj",
+      "msbuildProject": "../CrearXML/CrearXML.vbproj"
+    },
+    "Signature/1.0.0": {
+      "type": "project",
+      "path": "../Signature/Signature.csproj",
+      "msbuildProject": "../Signature/Signature.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
+      "CPEEnvio >= 1.0.0",
+      "CrearXML >= 1.0.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.6",
       "Microsoft.EntityFrameworkCore.Tools >= 5.0.6",
-      "Microsoft.VisualStudio.Azure.Containers.Tools.Targets >= 1.10.13"
+      "Microsoft.VisualStudio.Azure.Containers.Tools.Targets >= 1.10.13",
+      "Signature >= 1.0.0",
+      "businessEntities >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -5882,7 +5948,20 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\NetCore MVC\\ZEUS_POS\\businessEntities\\businessEntities.csproj": {
+              "projectPath": "C:\\NetCore MVC\\ZEUS_POS\\businessEntities\\businessEntities.csproj"
+            },
+            "C:\\NetCore MVC\\ZEUS_POS\\CPEEnvio\\CPEEnvio.vbproj": {
+              "projectPath": "C:\\NetCore MVC\\ZEUS_POS\\CPEEnvio\\CPEEnvio.vbproj"
+            },
+            "C:\\NetCore MVC\\ZEUS_POS\\CrearXML\\CrearXML.vbproj": {
+              "projectPath": "C:\\NetCore MVC\\ZEUS_POS\\CrearXML\\CrearXML.vbproj"
+            },
+            "C:\\NetCore MVC\\ZEUS_POS\\Signature\\Signature.csproj": {
+              "projectPath": "C:\\NetCore MVC\\ZEUS_POS\\Signature\\Signature.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

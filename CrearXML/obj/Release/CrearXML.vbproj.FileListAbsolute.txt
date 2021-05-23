@@ -1,0 +1,13 @@
+C:\NetCore MVC\ZEUS_POS\CrearXML\bin\Release\CrearXML.dll
+C:\NetCore MVC\ZEUS_POS\CrearXML\bin\Release\CrearXML.pdb
+C:\NetCore MVC\ZEUS_POS\CrearXML\bin\Release\CrearXML.xml
+C:\NetCore MVC\ZEUS_POS\CrearXML\bin\Release\businessEntities.dll
+C:\NetCore MVC\ZEUS_POS\CrearXML\bin\Release\businessEntities.pdb
+C:\NetCore MVC\ZEUS_POS\CrearXML\obj\Release\CrearXML.vbprojAssemblyReference.cache
+C:\NetCore MVC\ZEUS_POS\CrearXML\obj\Release\CrearXML.Resources.resources
+C:\NetCore MVC\ZEUS_POS\CrearXML\obj\Release\CrearXML.vbproj.GenerateResource.cache
+C:\NetCore MVC\ZEUS_POS\CrearXML\obj\Release\CrearXML.vbproj.CoreCompileInputs.cache
+C:\NetCore MVC\ZEUS_POS\CrearXML\obj\Release\CrearXML.vbproj.CopyComplete
+C:\NetCore MVC\ZEUS_POS\CrearXML\obj\Release\CrearXML.dll
+C:\NetCore MVC\ZEUS_POS\CrearXML\obj\Release\CrearXML.xml
+C:\NetCore MVC\ZEUS_POS\CrearXML\obj\Release\CrearXML.pdb

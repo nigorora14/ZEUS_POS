@@ -1,0 +1,8 @@
+C:\NetCore MVC\ZEUS_POS\businessEntities\bin\Release\businessEntities.dll
+C:\NetCore MVC\ZEUS_POS\businessEntities\bin\Release\businessEntities.pdb
+C:\NetCore MVC\ZEUS_POS\businessEntities\bin\Release\Newtonsoft.Json.dll
+C:\NetCore MVC\ZEUS_POS\businessEntities\obj\Release\businessEntities.csprojAssemblyReference.cache
+C:\NetCore MVC\ZEUS_POS\businessEntities\obj\Release\businessEntities.csproj.CoreCompileInputs.cache
+C:\NetCore MVC\ZEUS_POS\businessEntities\obj\Release\businessEntities.csproj.CopyComplete
+C:\NetCore MVC\ZEUS_POS\businessEntities\obj\Release\businessEntities.dll
+C:\NetCore MVC\ZEUS_POS\businessEntities\obj\Release\businessEntities.pdb

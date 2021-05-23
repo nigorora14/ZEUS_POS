@@ -15,5 +15,12 @@
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.10.13" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\businessEntities\businessEntities.csproj" />
+    <ProjectReference Include="..\CPEEnvio\CPEEnvio.vbproj" />
+    <ProjectReference Include="..\CrearXML\CrearXML.vbproj" />
+    <ProjectReference Include="..\Signature\Signature.csproj" />
+  </ItemGroup>
+
 
 </Project>

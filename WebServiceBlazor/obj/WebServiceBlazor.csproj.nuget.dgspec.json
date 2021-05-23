@@ -4,6 +4,64 @@
     "C:\\NetCore MVC\\ZEUS_POS\\WebServiceBlazor\\WebServiceBlazor.csproj": {}
   },
   "projects": {
+    "C:\\NetCore MVC\\ZEUS_POS\\businessEntities\\businessEntities.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\NetCore MVC\\ZEUS_POS\\businessEntities\\businessEntities.csproj",
+        "projectName": "businessEntities",
+        "projectPath": "C:\\NetCore MVC\\ZEUS_POS\\businessEntities\\businessEntities.csproj"
+      },
+      "frameworks": {
+        "net40": {}
+      }
+    },
+    "C:\\NetCore MVC\\ZEUS_POS\\CPEEnvio\\CPEEnvio.vbproj": {
+      "restore": {
+        "projectUniqueName": "C:\\NetCore MVC\\ZEUS_POS\\CPEEnvio\\CPEEnvio.vbproj",
+        "projectName": "CPEEnvio",
+        "projectPath": "C:\\NetCore MVC\\ZEUS_POS\\CPEEnvio\\CPEEnvio.vbproj"
+      },
+      "frameworks": {
+        "net40": {}
+      }
+    },
+    "C:\\NetCore MVC\\ZEUS_POS\\CrearXML\\CrearXML.vbproj": {
+      "restore": {
+        "projectUniqueName": "C:\\NetCore MVC\\ZEUS_POS\\CrearXML\\CrearXML.vbproj",
+        "projectName": "CrearXML",
+        "projectPath": "C:\\NetCore MVC\\ZEUS_POS\\CrearXML\\CrearXML.vbproj",
+        "frameworks": {
+          "net40": {
+            "projectReferences": {
+              "C:\\NetCore MVC\\ZEUS_POS\\businessEntities\\businessEntities.csproj": {
+                "projectPath": "C:\\NetCore MVC\\ZEUS_POS\\businessEntities\\businessEntities.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net40": {}
+      }
+    },
+    "C:\\NetCore MVC\\ZEUS_POS\\Signature\\Signature.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\NetCore MVC\\ZEUS_POS\\Signature\\Signature.csproj",
+        "projectName": "Signature",
+        "projectPath": "C:\\NetCore MVC\\ZEUS_POS\\Signature\\Signature.csproj",
+        "frameworks": {
+          "net40": {
+            "projectReferences": {
+              "C:\\NetCore MVC\\ZEUS_POS\\businessEntities\\businessEntities.csproj": {
+                "projectPath": "C:\\NetCore MVC\\ZEUS_POS\\businessEntities\\businessEntities.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net40": {}
+      }
+    },
     "C:\\NetCore MVC\\ZEUS_POS\\WebServiceBlazor\\WebServiceBlazor.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -34,7 +92,20 @@
         "frameworks": {
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\NetCore MVC\\ZEUS_POS\\businessEntities\\businessEntities.csproj": {
+                "projectPath": "C:\\NetCore MVC\\ZEUS_POS\\businessEntities\\businessEntities.csproj"
+              },
+              "C:\\NetCore MVC\\ZEUS_POS\\CPEEnvio\\CPEEnvio.vbproj": {
+                "projectPath": "C:\\NetCore MVC\\ZEUS_POS\\CPEEnvio\\CPEEnvio.vbproj"
+              },
+              "C:\\NetCore MVC\\ZEUS_POS\\CrearXML\\CrearXML.vbproj": {
+                "projectPath": "C:\\NetCore MVC\\ZEUS_POS\\CrearXML\\CrearXML.vbproj"
+              },
+              "C:\\NetCore MVC\\ZEUS_POS\\Signature\\Signature.csproj": {
+                "projectPath": "C:\\NetCore MVC\\ZEUS_POS\\Signature\\Signature.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

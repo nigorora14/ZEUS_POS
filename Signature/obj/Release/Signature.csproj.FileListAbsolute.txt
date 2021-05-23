@@ -1,0 +1,15 @@
+C:\NetCore MVC\ZEUS_POS\Signature\bin\Release\Signature.dll
+C:\NetCore MVC\ZEUS_POS\Signature\bin\Release\Signature.pdb
+C:\NetCore MVC\ZEUS_POS\Signature\bin\Release\businessEntities.dll
+C:\NetCore MVC\ZEUS_POS\Signature\bin\Release\System.Security.Claims.dll
+C:\NetCore MVC\ZEUS_POS\Signature\bin\Release\System.Security.Cryptography.Algorithms.dll
+C:\NetCore MVC\ZEUS_POS\Signature\bin\Release\System.Security.Cryptography.Encoding.dll
+C:\NetCore MVC\ZEUS_POS\Signature\bin\Release\System.Security.Cryptography.Primitives.dll
+C:\NetCore MVC\ZEUS_POS\Signature\bin\Release\System.Security.Cryptography.X509Certificates.dll
+C:\NetCore MVC\ZEUS_POS\Signature\bin\Release\System.Security.Principal.Windows.dll
+C:\NetCore MVC\ZEUS_POS\Signature\bin\Release\businessEntities.pdb
+C:\NetCore MVC\ZEUS_POS\Signature\obj\Release\Signature.csprojAssemblyReference.cache
+C:\NetCore MVC\ZEUS_POS\Signature\obj\Release\Signature.csproj.CoreCompileInputs.cache
+C:\NetCore MVC\ZEUS_POS\Signature\obj\Release\Signature.csproj.CopyComplete
+C:\NetCore MVC\ZEUS_POS\Signature\obj\Release\Signature.dll
+C:\NetCore MVC\ZEUS_POS\Signature\obj\Release\Signature.pdb

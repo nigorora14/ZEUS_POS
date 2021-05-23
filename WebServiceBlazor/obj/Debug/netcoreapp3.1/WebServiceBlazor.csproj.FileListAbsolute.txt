@@ -61,3 +61,15 @@ C:\NetCore MVC\ZEUS_POS\WebServiceBlazor\obj\Debug\netcoreapp3.1\WebServiceBlazo
 C:\NetCore MVC\ZEUS_POS\WebServiceBlazor\obj\Debug\netcoreapp3.1\WebServiceBlazor.dll
 C:\NetCore MVC\ZEUS_POS\WebServiceBlazor\obj\Debug\netcoreapp3.1\WebServiceBlazor.pdb
 C:\NetCore MVC\ZEUS_POS\WebServiceBlazor\obj\Debug\netcoreapp3.1\WebServiceBlazor.genruntimeconfig.cache
+C:\NetCore MVC\ZEUS_POS\WebServiceBlazor\bin\Debug\netcoreapp3.1\businessEntities.dll
+C:\NetCore MVC\ZEUS_POS\WebServiceBlazor\bin\Debug\netcoreapp3.1\CPEEnvio.dll
+C:\NetCore MVC\ZEUS_POS\WebServiceBlazor\bin\Debug\netcoreapp3.1\CrearXML.dll
+C:\NetCore MVC\ZEUS_POS\WebServiceBlazor\bin\Debug\netcoreapp3.1\Signature.dll
+C:\NetCore MVC\ZEUS_POS\WebServiceBlazor\bin\Debug\netcoreapp3.1\SharpZipLib.dll
+C:\NetCore MVC\ZEUS_POS\WebServiceBlazor\bin\Debug\netcoreapp3.1\businessEntities.pdb
+C:\NetCore MVC\ZEUS_POS\WebServiceBlazor\bin\Debug\netcoreapp3.1\CPEEnvio.pdb
+C:\NetCore MVC\ZEUS_POS\WebServiceBlazor\bin\Debug\netcoreapp3.1\CPEEnvio.xml
+C:\NetCore MVC\ZEUS_POS\WebServiceBlazor\bin\Debug\netcoreapp3.1\CPEEnvio.dll.config
+C:\NetCore MVC\ZEUS_POS\WebServiceBlazor\bin\Debug\netcoreapp3.1\CrearXML.pdb
+C:\NetCore MVC\ZEUS_POS\WebServiceBlazor\bin\Debug\netcoreapp3.1\CrearXML.xml
+C:\NetCore MVC\ZEUS_POS\WebServiceBlazor\bin\Debug\netcoreapp3.1\Signature.pdb
