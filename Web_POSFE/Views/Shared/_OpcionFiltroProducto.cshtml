@@ -1,0 +1,33 @@
+﻿@model PaginatedList<Web_POSFE.Models.Producto>
+
+<div class="app-page-title">
+    <div class="page-title-wrapper">
+        <div class="page-title-heading">
+            <div>
+                <form>
+                    <div>
+                        <h4>Productos ó Servicio disponibles</h4>
+                        @*<a asp-action="Agregar">Nuevo Producto</a>*@
+                        <button class="mb-2 mr-2 btn-transition btn btn-outline-info" asp-action="Agregar" type="submit">Nuevo</button>
+                        <button class="mb-2 mr-2 btn-transition btn btn-outline-info" asp-action="Index" type="submit">Mostrar Todo</button>
+
+                        <hr />
+                    </div>
+                </form>
+                <form asp-action="Index" method="get" class="needs-validation" novalidate>
+                    <div class="form-actions no-color">
+                        <div>
+                            <input type="text" name="SearchString" class="form-control" placeholder="Ingresar Producto"  value="@ViewData["currentFilter"]" required>
+                            <h1 class="invalid-feedback">Ingresar Producto o Servicio</h1>
+                            @*<div class="valid-feedback">Click en Buscar</div>*@
+                            <hr />
+                            <button class="mb-2 mr-2 btn-transition btn btn-outline-primary" type="submit">Buscar</button>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,189 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\NetCore MVC\\ZEUS_POS\\Web_POSFE\\Web_POSFE.csproj": {}
+  },
+  "projects": {
+    "C:\\NetCore MVC\\ZEUS_POS\\businessEntities\\businessEntities.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\NetCore MVC\\ZEUS_POS\\businessEntities\\businessEntities.csproj",
+        "projectName": "businessEntities",
+        "projectPath": "C:\\NetCore MVC\\ZEUS_POS\\businessEntities\\businessEntities.csproj"
+      },
+      "frameworks": {
+        "net40": {}
+      }
+    },
+    "C:\\NetCore MVC\\ZEUS_POS\\CPEEnvio\\CPEEnvio.vbproj": {
+      "restore": {
+        "projectUniqueName": "C:\\NetCore MVC\\ZEUS_POS\\CPEEnvio\\CPEEnvio.vbproj",
+        "projectName": "CPEEnvio",
+        "projectPath": "C:\\NetCore MVC\\ZEUS_POS\\CPEEnvio\\CPEEnvio.vbproj"
+      },
+      "frameworks": {
+        "net40": {}
+      }
+    },
+    "C:\\NetCore MVC\\ZEUS_POS\\CrearXML\\CrearXML.vbproj": {
+      "restore": {
+        "projectUniqueName": "C:\\NetCore MVC\\ZEUS_POS\\CrearXML\\CrearXML.vbproj",
+        "projectName": "CrearXML",
+        "projectPath": "C:\\NetCore MVC\\ZEUS_POS\\CrearXML\\CrearXML.vbproj",
+        "frameworks": {
+          "net40": {
+            "projectReferences": {
+              "C:\\NetCore MVC\\ZEUS_POS\\businessEntities\\businessEntities.csproj": {
+                "projectPath": "C:\\NetCore MVC\\ZEUS_POS\\businessEntities\\businessEntities.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net40": {}
+      }
+    },
+    "C:\\NetCore MVC\\ZEUS_POS\\Signature\\Signature.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\NetCore MVC\\ZEUS_POS\\Signature\\Signature.csproj",
+        "projectName": "Signature",
+        "projectPath": "C:\\NetCore MVC\\ZEUS_POS\\Signature\\Signature.csproj",
+        "frameworks": {
+          "net40": {
+            "projectReferences": {
+              "C:\\NetCore MVC\\ZEUS_POS\\businessEntities\\businessEntities.csproj": {
+                "projectPath": "C:\\NetCore MVC\\ZEUS_POS\\businessEntities\\businessEntities.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net40": {}
+      }
+    },
+    "C:\\NetCore MVC\\ZEUS_POS\\Web_POSFE\\Web_POSFE.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\NetCore MVC\\ZEUS_POS\\Web_POSFE\\Web_POSFE.csproj",
+        "projectName": "Web_POSFE",
+        "projectPath": "C:\\NetCore MVC\\ZEUS_POS\\Web_POSFE\\Web_POSFE.csproj",
+        "packagesPath": "C:\\Users\\Nilton\\.nuget\\packages\\",
+        "outputPath": "C:\\NetCore MVC\\ZEUS_POS\\Web_POSFE\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Nilton\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\NetCore MVC\\ZEUS_POS\\businessEntities\\businessEntities.csproj": {
+                "projectPath": "C:\\NetCore MVC\\ZEUS_POS\\businessEntities\\businessEntities.csproj"
+              },
+              "C:\\NetCore MVC\\ZEUS_POS\\CPEEnvio\\CPEEnvio.vbproj": {
+                "projectPath": "C:\\NetCore MVC\\ZEUS_POS\\CPEEnvio\\CPEEnvio.vbproj"
+              },
+              "C:\\NetCore MVC\\ZEUS_POS\\CrearXML\\CrearXML.vbproj": {
+                "projectPath": "C:\\NetCore MVC\\ZEUS_POS\\CrearXML\\CrearXML.vbproj"
+              },
+              "C:\\NetCore MVC\\ZEUS_POS\\Signature\\Signature.csproj": {
+                "projectPath": "C:\\NetCore MVC\\ZEUS_POS\\Signature\\Signature.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": {
+              "target": "Package",
+              "version": "[5.0.6, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.Relational": {
+              "target": "Package",
+              "version": "[5.0.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.6, )"
+            },
+            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
+              "target": "Package",
+              "version": "[1.10.13, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[5.0.2, )"
+            },
+            "Microsoft.jQuery.Unobtrusive.Ajax": {
+              "target": "Package",
+              "version": "[3.2.6, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,121 @@
+﻿@model PaginatedList<Web_POSFE.Models.Producto>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_LayoutMaster.cshtml";
+}
+<partial name="_OpcionFiltroProducto" />
+
+<script>// Ejemplo de JavaScript de inicio para deshabilitar el envío de formularios si hay campos no válidos
+                                    (function() {
+                                        'use strict';
+                                        window.addEventListener('load', function() {
+                                            // Obtener todos los formularios a los que queremos aplicar estilos de validación de Bootstrap personalizados
+                                            var forms = document.getElementsByClassName('needs-validation');
+                                            // Bucle sobre ellos y evitar la presentación
+                                            var validation = Array.prototype.filter.call(forms, function(form) {
+                                                form.addEventListener('submit', function(event) {
+                                                    if (form.checkValidity() === false) {
+                                                        event.preventDefault();
+                                                        event.stopPropagation();
+                                                    }
+                                                    form.classList.add('was-validated');
+                                                }, false);
+                                            });
+                                        }, false);
+                                    })();</script>
+
+<table class="table table-bordered table-hover" width="100%" id="tablaProducto">
+    <thead>
+        <tr>
+            <th>
+                <a asp-action="Index"
+                   asp-route-sortOrder="@ViewData["CodSortParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">ID Producto</a>
+            </th>
+            <th>
+                <a asp-action="Index"
+                   asp-route-sortOrder="@ViewData["NameSortParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">Descripcion</a>
+            </th>
+
+            <th>
+                Precio Compra
+            </th>
+            <th>
+                Precio Venta x Menor
+            </th>
+            <th>
+                Precio Venta x Mayor
+            </th>
+            <th>
+                Tipo Producto
+            </th>
+
+            <th>
+                Estado
+            </th>
+            <th>
+                Fecha Creacion
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdPro)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DescripcionLarga)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.PreCompraS)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PreVntaxMenor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PreVntaxMayor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TipoProdcto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EstadoPro)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaCreaProServ)
+            </td>
+            <td>
+                <a asp-action="Editar" asp-route-id="@item.IdPro">Editar</a> |
+                <a asp-action="Detalle" asp-route-id="@item.IdPro">Buscar</a> |
+                <a asp-action="Eliminar" asp-route-id="@item.IdPro">Eliminar</a>
+            </td>
+        </tr>
+
+        }
+    </tbody>
+</table>
+
+@{
+    var prevDisabled = !Model.HasPreviousPage ? "disabled" : "";
+    var nextDisabled = !Model.HasNextPage ? "disabled" : "";
+}
+
+<a asp-action="Index"
+   asp-route-sortOrder="@ViewData["CurrentSort"]"
+   asp-route-pageNumber="@(Model.PageIndex - 1)"
+   asp-route-currentFilter="@ViewData["CurrentFilter"]"
+   class="btn btn-default @prevDisabled">
+    Anterior
+</a>
+
+<a asp-action="Index"
+   asp-route-sortOrder="@ViewData["CurrentSort"]"
+   asp-route-pageNumber="@(Model.PageIndex + 1)"
+   asp-route-currentFilter="@ViewData["CurrentFilter"]"
+   class="btn btn-default @nextDisabled">
+    Siguiente
+</a>

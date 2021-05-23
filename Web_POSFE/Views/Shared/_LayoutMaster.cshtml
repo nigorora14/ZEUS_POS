@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Language" content="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>@ViewData["Title"] - Web_POSFE</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" />
+    <meta name="description" content="Implement in your applications Google or vector maps.">
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <link href="~/main.css" rel="stylesheet" />
+    @await RenderSectionAsync("Styles", required: false)
+
+</head>
+<body>
+    <div class="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header">
+        <!--Menu Cabecera-->
+        <partial name="_MenuCabecera" />
+        <!-- Menu de Configuracion de colores -->
+        <partial name="_MenuCongColores" />
+
+        <div class="app-main">
+            <!--Menu Vertical-->
+            <partial name="_MenuVertical" />
+            <div class="app-main__outer">
+                <div class="app-main__inner">
+                    <!--Para realizar los filtros de arriba-->
+                    @*<partial name="_OpcionHorizontales" />*@
+                    @RenderBody()
+                </div>
+                <!-- Pie de Pagna-->
+                <partial name="_Footer" />
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="~/assets/scripts/main.js"></script>
+    <!-- Theme JS -->
+    <script src="~/js/argon.js"></script>
+    <script src="~/js/jquery.unobtrusive-ajax.min.js"></script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

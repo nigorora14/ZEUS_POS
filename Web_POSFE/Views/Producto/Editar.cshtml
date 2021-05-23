@@ -1,0 +1,136 @@
+﻿@model Web_POSFE.Models.Producto
+
+@{
+    ViewData["Title"] = "Editar";
+    Layout = "~/Views/Shared/_LayoutMaster.cshtml";
+}
+
+<h1>Editar</h1>
+
+<h4>Producto</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Editar">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="IdPro" />  @*disabled="disabled"*@
+
+            <div class="form-group">
+                Proveedor
+                <select asp-for="Idprovee" class="form-control" id="ddlproveedor"
+                        asp-items="@(new SelectList(ViewBag.Idprovee,"Idprovee","Nombre",Model.Idprovee))">
+                </select>
+                <span asp-validation-for="Idprovee" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                Descripcion
+                <input asp-for="DescripcionLarga" class="form-control" />
+                <span asp-validation-for="DescripcionLarga" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                Margen de Venta
+                <input asp-for="Frank" class="form-control" />
+                <span asp-validation-for="Frank" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                Precio Compra Soles
+                <input asp-for="PreCompraS" class="form-control" />
+                <span asp-validation-for="PreCompraS" class="text-danger"></span>
+            </div>
+            <div>
+                @*Precio Compra Dolares*@
+                <input asp-for="PreCompra" class="form-control" style="display:none" />
+                <span asp-validation-for="PreCompra" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                @*Stock Actual*@
+                <input asp-for="StockActual" class="form-control" style="display:none" />
+                <span asp-validation-for="StockActual" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                Categoria
+                <select asp-for="IdCat" class="form-control" id="ddlcategoria"
+                        asp-items="@(new SelectList(ViewBag.IdCat,"IdCat","Categoria1",Model.IdCat))">
+                </select>
+                <span asp-validation-for="IdCat" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                Marca
+                <select asp-for="IdMarca" class="form-control" id="ddlmarca"
+                        asp-items="@(new SelectList(ViewBag.IdMarca,"IdMarca","Marca1",Model.IdMarca))">
+                </select>
+                <span asp-validation-for="IdMarca" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                @*Foto*@
+                <input asp-for="Foto" class="form-control" style="display:none" />
+                <span asp-validation-for="Foto" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                Precio Venta al por Menor
+                <input asp-for="PreVntaxMenor" class="form-control" />
+                <span asp-validation-for="PreVntaxMenor" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                Precio Venta al por Mayor
+                <input asp-for="PreVntaxMayor" class="form-control" />
+                <span asp-validation-for="PreVntaxMayor" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                @*Venta Dolar*@
+                <input asp-for="PreVntadolar" class="form-control" style="display:none" />
+                <span asp-validation-for="PreVntadolar" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                @*Und Medida*@
+                <input asp-for="UndMedida" class="form-control" style="display:none" />
+                <span asp-validation-for="UndMedida" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                @*Peso Unit*@
+                <input asp-for="PesoUnit" class="form-control" style="display:none" />
+                <span asp-validation-for="PesoUnit" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                @*Utilidad*@
+                <input asp-for="UtilidadUnit" class="form-control" style="display:none" />
+                <span asp-validation-for="UtilidadUnit" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                Tipo Producto
+                <input asp-for="TipoProdcto" class="form-control" />
+                <span asp-validation-for="TipoProdcto" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                @*Valor Cantidad*@
+                <input asp-for="ValorPorCant" class="form-control" style="display:none" />
+                <span asp-validation-for="ValorPorCant" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                Estado
+                <input asp-for="EstadoPro" class="form-control" />
+                <span asp-validation-for="EstadoPro" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                @*Fecha*@
+                <input asp-for="FechaCreaProServ" class="form-control" style="display:none" />
+                <span asp-validation-for="FechaCreaProServ" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Editar" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Regresar</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
