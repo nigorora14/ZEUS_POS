@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "uHwSaFBaThCY/aMQRkPCbnD9RNSrAYDhif3z/xEkJas2+AUJ33kCKFwwTiIvCNPq18DzAyHoQqnkYMM/zEMExw==",
+  "dgSpecHash": "8RPb0KC27jA7NAAdMVrQKBo7YoeATYZEkLJ4+Ny+ChBPw4dsAzHGKMg2xKVXHrO3i6v5cFQCGd5ypayMyIiEFQ==",
   "success": true,
-  "projectFilePath": "C:\\NetCore MVC\\ZEUS_POS\\WebServiceBlazor\\WebServiceBlazor.csproj",
+  "projectFilePath": "C:\\NetCore MVC\\ZEUS_POS\\webserviceblazor\\WebServiceBlazor.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Nilton\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Nilton\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

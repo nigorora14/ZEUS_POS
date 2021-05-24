@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "lwfRZNc0xedFD5fSGJsS3baY1sfFOmZ7DzpsckNKwMPVULGsSlVzi0arS/2KFkawlYYoCOavdMR8aotwWAqHgg==",
+  "success": true,
+  "projectFilePath": "C:\\NetCore MVC\\ZEUS_POS\\servicioapi\\ServicioApi.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Nilton\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.10.13\\microsoft.visualstudio.azure.containers.tools.targets.1.10.13.nupkg.sha512"
+  ],
+  "logs": []
+}

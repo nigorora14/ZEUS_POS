@@ -1,0 +1,7 @@
+C:\NetCore MVC\ZEUS_POS\ServicioApi\obj\Release\netcoreapp3.1\PubTmp\Out\ServicioApi.exe
+C:\NetCore MVC\ZEUS_POS\ServicioApi\obj\Release\netcoreapp3.1\PubTmp\Out\appsettings.Development.json
+C:\NetCore MVC\ZEUS_POS\ServicioApi\obj\Release\netcoreapp3.1\PubTmp\Out\appsettings.json
+C:\NetCore MVC\ZEUS_POS\ServicioApi\obj\Release\netcoreapp3.1\PubTmp\Out\ServicioApi.dll
+C:\NetCore MVC\ZEUS_POS\ServicioApi\obj\Release\netcoreapp3.1\PubTmp\Out\ServicioApi.deps.json
+C:\NetCore MVC\ZEUS_POS\ServicioApi\obj\Release\netcoreapp3.1\PubTmp\Out\ServicioApi.runtimeconfig.json
+C:\NetCore MVC\ZEUS_POS\ServicioApi\obj\Release\netcoreapp3.1\PubTmp\Out\ServicioApi.pdb
