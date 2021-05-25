@@ -9,6 +9,7 @@ using POS_Blazor.Data;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Threading.Tasks;
 
 namespace POS_Blazor
@@ -29,6 +30,17 @@ namespace POS_Blazor
             services.AddRazorPages();
             services.AddServerSideBlazor();
             services.AddSingleton<WeatherForecastService>();
+
+            //Para omitir el certificado
+            var httpClientHandler = new HttpClientHandler();
+            httpClientHandler.ServerCertificateCustomValidationCallback = (message, cert, chain, errors) => true;
+            //fin
+            
+            //para minimizar la ruta - buena practica
+            services.AddSingleton(new HttpClient
+            {
+                BaseAddress= new Uri("https://localhost:5001")
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

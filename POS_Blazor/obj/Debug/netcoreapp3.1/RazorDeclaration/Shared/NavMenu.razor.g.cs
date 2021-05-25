@@ -83,7 +83,7 @@ using POS_Blazor.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 28 "C:\NetCore MVC\ZEUS_POS\POS_Blazor\Shared\NavMenu.razor"
+#line 33 "C:\NetCore MVC\ZEUS_POS\POS_Blazor\Shared\NavMenu.razor"
        
     private bool collapseNavMenu = true;
 

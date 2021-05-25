@@ -1,19 +1,14 @@
 {
   "format": 1,
   "restore": {
-    "C:\\NetCore MVC\\ZEUS_POS\\webserviceblazor\\WebServiceBlazor.csproj": {}
+    "C:\\NetCore MVC\\ZEUS_POS\\WebServiceBlazor\\WebServiceBlazor.csproj": {}
   },
   "projects": {
     "C:\\NetCore MVC\\ZEUS_POS\\businessEntities\\businessEntities.csproj": {
       "restore": {
         "projectUniqueName": "C:\\NetCore MVC\\ZEUS_POS\\businessEntities\\businessEntities.csproj",
         "projectName": "businessEntities",
-        "projectPath": "C:\\NetCore MVC\\ZEUS_POS\\businessEntities\\businessEntities.csproj",
-        "frameworks": {
-          "net40": {
-            "projectReferences": {}
-          }
-        }
+        "projectPath": "C:\\NetCore MVC\\ZEUS_POS\\businessEntities\\businessEntities.csproj"
       },
       "frameworks": {
         "net40": {}
@@ -23,12 +18,7 @@
       "restore": {
         "projectUniqueName": "C:\\NetCore MVC\\ZEUS_POS\\CPEEnvio\\CPEEnvio.vbproj",
         "projectName": "CPEEnvio",
-        "projectPath": "C:\\NetCore MVC\\ZEUS_POS\\CPEEnvio\\CPEEnvio.vbproj",
-        "frameworks": {
-          "net40": {
-            "projectReferences": {}
-          }
-        }
+        "projectPath": "C:\\NetCore MVC\\ZEUS_POS\\CPEEnvio\\CPEEnvio.vbproj"
       },
       "frameworks": {
         "net40": {}
@@ -58,18 +48,6 @@
         "projectUniqueName": "C:\\NetCore MVC\\ZEUS_POS\\Signature\\Signature.csproj",
         "projectName": "Signature",
         "projectPath": "C:\\NetCore MVC\\ZEUS_POS\\Signature\\Signature.csproj",
-        "packagesPath": "C:\\Users\\Nilton\\.nuget\\packages\\",
-        "projectStyle": "PackagesConfig",
-        "configFilePaths": [
-          "C:\\Users\\Nilton\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
         "frameworks": {
           "net40": {
             "projectReferences": {
@@ -78,21 +56,20 @@
               }
             }
           }
-        },
-        "packagesConfigPath": "C:\\NetCore MVC\\ZEUS_POS\\Signature\\packages.config"
+        }
       },
       "frameworks": {
         "net40": {}
       }
     },
-    "C:\\NetCore MVC\\ZEUS_POS\\webserviceblazor\\WebServiceBlazor.csproj": {
+    "C:\\NetCore MVC\\ZEUS_POS\\WebServiceBlazor\\WebServiceBlazor.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\NetCore MVC\\ZEUS_POS\\webserviceblazor\\WebServiceBlazor.csproj",
+        "projectUniqueName": "C:\\NetCore MVC\\ZEUS_POS\\WebServiceBlazor\\WebServiceBlazor.csproj",
         "projectName": "WebServiceBlazor",
-        "projectPath": "C:\\NetCore MVC\\ZEUS_POS\\webserviceblazor\\WebServiceBlazor.csproj",
+        "projectPath": "C:\\NetCore MVC\\ZEUS_POS\\WebServiceBlazor\\WebServiceBlazor.csproj",
         "packagesPath": "C:\\Users\\Nilton\\.nuget\\packages\\",
-        "outputPath": "C:\\NetCore MVC\\ZEUS_POS\\webserviceblazor\\obj\\",
+        "outputPath": "C:\\NetCore MVC\\ZEUS_POS\\WebServiceBlazor\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

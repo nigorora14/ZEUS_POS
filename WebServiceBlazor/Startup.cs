@@ -9,6 +9,7 @@ using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Threading.Tasks;
 
 namespace WebServiceBlazor
@@ -36,6 +37,12 @@ namespace WebServiceBlazor
                               }
                               );
             });
+
+            //Para omitir el certificado
+            var httpClientHandler = new HttpClientHandler();
+            httpClientHandler.ServerCertificateCustomValidationCallback = (message, cert, chain, errors) => true;
+            //fin
+
             services.AddControllers();
         }
 

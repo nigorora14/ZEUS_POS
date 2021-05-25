@@ -1,0 +1,32 @@
+﻿@page "/CompProducto"
+
+@using System.Net.Http
+@using System.Net.Http.Json
+@inject HttpClient Http
+
+<h3>CompProducto</h3>
+
+<table class="table">
+    @if (_rpt!=null && _rpt.Data!=null)
+    {
+        @foreach (var item in _rpt.Data) //para realizar un recorrido a la clase producto de la carpeta data
+        {
+    <tr>
+        <td>@item.IdPro</td>
+        <td>@item.IdPro</td>
+        <td>@item.DescripcionLarga</td>
+        <td>@item.PreVntaxMenor</td>
+        <td>@item.PreCompra</td>
+    </tr>
+
+        }
+    }
+</table>
+
+@code {
+    protected override async Task OnInitializedAsync() =>
+    _rpt = await Http.GetFromJsonAsync<Data.Respuesta>(Url);
+
+    public string Url = "/api/Producto";
+    public Data.Respuesta _rpt = new Data.Respuesta();
+}

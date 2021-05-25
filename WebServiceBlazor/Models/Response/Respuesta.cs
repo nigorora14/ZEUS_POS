@@ -9,7 +9,7 @@ namespace WebServiceBlazor.Models.Response
     {
         public int exito { get; set; }
         public string Mensaje { get; set; }
-        public object Data { get; set; }
+        public List<Producto> Data { get; set; }
         //constructor
         public Respuesta()
         {
