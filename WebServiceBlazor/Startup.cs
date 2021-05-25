@@ -15,6 +15,7 @@ namespace WebServiceBlazor
 {
     public class Startup
     {
+        readonly string ServiceAPI = "ServiceAPI";
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -25,6 +26,16 @@ namespace WebServiceBlazor
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            /*va permitir que me conecte desde el navegador*/
+            services.AddCors(opt =>
+            {
+                opt.AddPolicy(name: ServiceAPI,
+                              builder =>
+                              {
+                                  builder.WithOrigins("*");
+                              }
+                              );
+            });
             services.AddControllers();
         }
 
@@ -46,6 +57,9 @@ namespace WebServiceBlazor
             {
                 endpoints.MapControllers();
             });
+
+            /*Agregar*/
+            app.UseCors(ServiceAPI);
         }
     }
 }
