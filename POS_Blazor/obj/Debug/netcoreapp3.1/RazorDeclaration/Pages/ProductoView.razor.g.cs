@@ -69,21 +69,21 @@ using POS_Blazor.Shared;
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "C:\NetCore MVC\ZEUS_POS\POS_Blazor\Pages\CompProducto.razor"
+#line 3 "C:\NetCore MVC\ZEUS_POS\POS_Blazor\Pages\ProductoView.razor"
 using System.Net.Http;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 4 "C:\NetCore MVC\ZEUS_POS\POS_Blazor\Pages\CompProducto.razor"
+#line 4 "C:\NetCore MVC\ZEUS_POS\POS_Blazor\Pages\ProductoView.razor"
 using System.Net.Http.Json;
 
 #line default
 #line hidden
 #nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/CompProducto")]
-    public partial class CompProducto : Microsoft.AspNetCore.Components.ComponentBase
+    [Microsoft.AspNetCore.Components.RouteAttribute("/ProductoView")]
+    public partial class ProductoView : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -91,10 +91,9 @@ using System.Net.Http.Json;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 56 "C:\NetCore MVC\ZEUS_POS\POS_Blazor\Pages\CompProducto.razor"
+#line 54 "C:\NetCore MVC\ZEUS_POS\POS_Blazor\Pages\ProductoView.razor"
        
-    protected override async Task OnInitializedAsync() =>
-    _rpt = await Http.GetFromJsonAsync<Data.Respuesta>(Url);
+    protected override async Task OnInitializedAsync() => _rpt = await Http.GetFromJsonAsync<Data.Respuesta>(Url);
 
     public string Url = "/api/Producto";
     public Data.Respuesta _rpt = new Data.Respuesta();

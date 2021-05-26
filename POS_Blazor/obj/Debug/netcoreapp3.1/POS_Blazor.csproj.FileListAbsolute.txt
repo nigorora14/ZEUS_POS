@@ -50,6 +50,8 @@ C:\NetCore MVC\ZEUS_POS\POS_Blazor\obj\Debug\netcoreapp3.1\POS_Blazor.genruntime
 C:\NetCore MVC\ZEUS_POS\POS_Blazor\obj\Debug\netcoreapp3.1\POS_Blazor.csproj.CopyComplete
 C:\NetCore MVC\ZEUS_POS\POS_Blazor\bin\Debug\netcoreapp3.1\System.Net.Http.Json.dll
 C:\NetCore MVC\ZEUS_POS\POS_Blazor\bin\Debug\netcoreapp3.1\System.Text.Json.dll
-C:\NetCore MVC\ZEUS_POS\POS_Blazor\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\CompProducto.razor.g.cs
-C:\NetCore MVC\ZEUS_POS\POS_Blazor\obj\Debug\netcoreapp3.1\Razor\Pages\CompProducto.razor.g.cs
+C:\NetCore MVC\ZEUS_POS\POS_Blazor\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\ProductoForm.razor.g.cs
+C:\NetCore MVC\ZEUS_POS\POS_Blazor\obj\Debug\netcoreapp3.1\Razor\Pages\ProductoForm.razor.g.cs
+C:\NetCore MVC\ZEUS_POS\POS_Blazor\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\ProductoView.razor.g.cs
+C:\NetCore MVC\ZEUS_POS\POS_Blazor\obj\Debug\netcoreapp3.1\Razor\Pages\ProductoView.razor.g.cs
 C:\NetCore MVC\ZEUS_POS\POS_Blazor\obj\Debug\netcoreapp3.1\POS_Blazor.csprojAssemblyReference.cache

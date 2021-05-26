@@ -48,21 +48,21 @@ namespace WebServiceBlazor.Controllers
                     _prod.DescripcionLarga = model.DescripcionLarga;
                     _prod.Frank = model.Frank;
                     _prod.PreCompraS = model.PreCompraS;
-                    _prod.PreCompra = model.PreCompra;
-                    _prod.StockActual = model.StockActual;
+                    _prod.PreCompra = 0;//model.PreCompra
+                    _prod.StockActual =0;// model.StockActual
                     _prod.IdCat = model.IdCat;
                     _prod.IdMarca = model.IdMarca;
-                    _prod.Foto = model.Foto; //envia una url de la foto
+                    _prod.Foto = "-"; //envia una url de la foto . model.Foto
                     _prod.PreVntaxMenor = model.PreVntaxMenor;
-                    _prod.PreVntaxMayor = model.PreVntaxMayor;
-                    _prod.PreVntadolar = model.PreVntadolar;
+                    _prod.PreVntaxMayor = 0;//model.PreVntaxMayor
+                    _prod.PreVntadolar = 0; //model.PreVntadolar
                     _prod.UndMedida = model.UndMedida;
-                    _prod.PesoUnit = model.PesoUnit;
-                    _prod.UtilidadUnit = model.UtilidadUnit;
+                    _prod.PesoUnit = 0;//model.PesoUnit
+                    _prod.UtilidadUnit = model.PreVntaxMenor-model.PreCompraS;
                     _prod.TipoProdcto = model.TipoProdcto;
-                    _prod.ValorPorCant = model.ValorPorCant;
-                    _prod.EstadoPro = model.EstadoPro;
-                    _prod.FechaCreaProServ = model.FechaCreaProServ;
+                    _prod.ValorPorCant = 0;//model.ValorPorCant
+                    _prod.EstadoPro = "Activo";//model.EstadoPro
+                    _prod.FechaCreaProServ = DateTime.Now;
 
                     db.Productos.Add(_prod);//Add: Metodo que agrega
                     db.SaveChanges();//SaveChanges: Guarda la trx realizada

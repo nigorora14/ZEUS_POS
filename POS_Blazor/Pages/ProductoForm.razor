@@ -1,0 +1,97 @@
+﻿@page "/ProductoForm"
+
+@using System.Net.Http
+@using System.Net.Http.Json
+
+@inject HttpClient Http
+@inject NavigationManager NavigationManager
+
+<h3>ProductoForm</h3>
+@*crea el bind de los datos html - @_prod:objeto que se va utilizar para hacer el bind*@
+<EditForm Model="@_prod">
+    <div class="container-fluid">
+        <div class="form-group row mb-1">
+            <label class="col-sm-3">id Prod</label>
+            <div class="col-sm-9">
+                <InputText class="form-control" @bind-Value="@_prod.IdPro"></InputText>
+            </div>
+        </div>
+        <div class="form-group row mb-1">
+            <label class="col-sm-3">id Proveedor</label>
+            <div class="col-sm-9">
+                <InputText class="form-control" @bind-Value="@_prod.Idprovee"></InputText>
+            </div>
+        </div>
+        <div class="form-group row mb-1">
+            <label class="col-sm-3">Descripcion</label>
+            <div class="col-sm-9">
+                <InputText class="form-control" @bind-Value="@_prod.DescripcionLarga"></InputText>
+            </div>
+        </div>
+        <div class="form-group row mb-1">
+            <label class="col-sm-3">Margen de Ganancia</label>
+            <div class="col-sm-9">
+                <InputNumber class="form-control" @bind-Value="@_prod.Frank"></InputNumber>
+            </div>
+        </div>
+        <div class="form-group row mb-1">
+            <label class="col-sm-3">Precio Compra</label>
+            <div class="col-sm-9">
+                <InputNumber class="form-control" @bind-Value="@_prod.PreCompraS"></InputNumber>
+            </div>
+        </div>
+
+        <div class="form-group row mb-1">
+            <label class="col-sm-3">Categoria</label>
+            <div class="col-sm-9">
+                <InputNumber class="form-control" @bind-Value="@_prod.IdCat"></InputNumber>
+            </div>
+        </div>
+        <div class="form-group row mb-1">
+            <label class="col-sm-3">Marca</label>
+            <div class="col-sm-9">
+                <InputNumber class="form-control" @bind-Value="@_prod.IdMarca"></InputNumber>
+            </div>
+        </div>
+        <div class="form-group row mb-1">
+            <label class="col-sm-3">Precio Venta Menor</label>
+            <div class="col-sm-9">
+                <InputNumber class="form-control" @bind-Value="@_prod.PreVntaxMenor"></InputNumber>
+            </div>
+        </div>
+        <div class="form-group row mb-1">
+            <label class="col-sm-3">Unid. Medida</label>
+            <div class="col-sm-9">
+                <InputText class="form-control" @bind-Value="@_prod.UndMedida"></InputText>
+            </div>
+        </div>
+
+        <div class="form-group row mb-1">
+            <label class="col-sm-3">Tipo Producto</label>
+            <div class="col-sm-9">
+                <InputText class="form-control" @bind-Value="@_prod.TipoProdcto"></InputText>
+            </div>
+        </div>
+
+        <div class="form-group row mb-1">
+            <div class="col-sm-12">
+                <button class="btn btn-primary" @onclick="GuardarProducto">Guardar</button>
+            </div>
+        </div>
+    </div>
+</EditForm>
+
+@code {
+    Data.Producto _prod = new Data.Producto();
+    Data.Respuesta _rpt = new Data.Respuesta();
+    public string Url = "/api/Producto";
+
+    public async Task GuardarProducto()
+    {
+        var response = await Http.PostAsJsonAsync<Data.Producto>(Url,_prod);
+        _rpt = response.Content.ReadFromJsonAsync<Data.Respuesta>().Result;
+
+        //para realizar navegaciones a una ruta especifica.
+        NavigationManager.NavigateTo("/ProductoView");
+    }
+}
