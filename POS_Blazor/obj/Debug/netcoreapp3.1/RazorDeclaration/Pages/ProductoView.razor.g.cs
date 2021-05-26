@@ -91,12 +91,12 @@ using System.Net.Http.Json;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 54 "C:\NetCore MVC\ZEUS_POS\POS_Blazor\Pages\ProductoView.razor"
+#line 55 "C:\NetCore MVC\ZEUS_POS\POS_Blazor\Pages\ProductoView.razor"
        
-    protected override async Task OnInitializedAsync() => _rpt = await Http.GetFromJsonAsync<Data.Respuesta>(Url);
+    protected override async Task OnInitializedAsync() => _rpt = await Http.GetFromJsonAsync<Data.Respuesta<List<Data.Producto>>>(Url);
 
     public string Url = "/api/Producto";
-    public Data.Respuesta _rpt = new Data.Respuesta();
+    public Data.Respuesta<List<Data.Producto>> _rpt = new Data.Respuesta<List<Data.Producto>>();
 
 #line default
 #line hidden

@@ -5,11 +5,11 @@ using System.Threading.Tasks;
 
 namespace POS_Blazor.Data
 {
-    public class Respuesta
+    public class Respuesta<T>
     {
         public int exito { get; set; }
         public string Mensaje { get; set; }
-        public List<Producto> Data { get; set; }
+        public T Data { get; set; }
        
     }
 }

@@ -14,10 +14,10 @@ namespace WebServiceBlazor.Controllers
     [ApiController]
     public class ProductoController : Controller
     {
-       [HttpGet]
+        [HttpGet]
         public IActionResult Get()
         {
-            Respuesta _respuesta = new Respuesta();
+            Respuesta<List<Producto>> _respuesta = new Respuesta<List<Producto>>();
             try
             {
                 using (ZEUS_POS_FEContext db = new ZEUS_POS_FEContext()) //using: se usa para abrir y cerrar la cn a la BDs
@@ -33,10 +33,29 @@ namespace WebServiceBlazor.Controllers
             }
             return Ok(_respuesta);//Ok: metodo nativo de MVC API para regresar el objeto
         }
+        [HttpGet("{Id}")]
+        public IActionResult Get(string Id)
+        {
+            Respuesta<Producto> _respuesta = new Respuesta<Producto>();
+            try
+            {
+                using (ZEUS_POS_FEContext db = new ZEUS_POS_FEContext()) //using: se usa para abrir y cerrar la cn a la BDs
+                {
+                    var lst = db.Productos.Find(Id);//variable que contiene un select de la tabla producto
+                    _respuesta.exito = 1;
+                    _respuesta.Data = lst;
+                }
+            }
+            catch (Exception ex)
+            {
+                _respuesta.Mensaje = ex.Message;
+            }
+            return Ok(_respuesta);//Ok: metodo nativo de MVC API para regresar el objeto
+        }
         [HttpPost]
         public IActionResult Add(ProductoRequest model)
         {
-            Respuesta _respuesta = new Respuesta();
+            Respuesta<object> _respuesta = new Respuesta<object>();
             try
             {
                 using (ZEUS_POS_FEContext db = new ZEUS_POS_FEContext()) //using: se usa para abrir y cerrar la cn a la BDs
@@ -79,7 +98,7 @@ namespace WebServiceBlazor.Controllers
         [HttpPut]
         public IActionResult Edit(ProductoRequest model)
         {
-            Respuesta _respuesta = new Respuesta();
+            Respuesta<object> _respuesta = new Respuesta<object>();
             try
             {
                 using (ZEUS_POS_FEContext db = new ZEUS_POS_FEContext()) //using: se usa para abrir y cerrar la cn a la BDs
@@ -122,7 +141,7 @@ namespace WebServiceBlazor.Controllers
         [HttpDelete("{Id}")]
         public IActionResult delete(string Id)
         {
-            Respuesta _respuesta = new Respuesta();
+            Respuesta<object> _respuesta = new Respuesta<object>();
             try
             {
                 using (ZEUS_POS_FEContext db = new ZEUS_POS_FEContext()) //using: se usa para abrir y cerrar la cn a la BDs

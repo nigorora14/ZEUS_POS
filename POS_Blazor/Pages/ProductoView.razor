@@ -2,6 +2,7 @@
 
 @using System.Net.Http
 @using System.Net.Http.Json
+
 @inject HttpClient Http
 
 <h3>Producto</h3>
@@ -41,7 +42,7 @@ else
                     <td>@item.PreVntaxMenor</td>
                     <td>@item.PreCompra</td>
                     <td>
-                        <a>Editar</a>
+                        <a href="/ProductoForm/@item.IdPro">Editar</a>
                         <a>Eliminar</a>
                     </td>
                 </tr>
@@ -52,8 +53,8 @@ else
 
 
 @code {
-    protected override async Task OnInitializedAsync() => _rpt = await Http.GetFromJsonAsync<Data.Respuesta>(Url);
+    protected override async Task OnInitializedAsync() => _rpt = await Http.GetFromJsonAsync<Data.Respuesta<List<Data.Producto>>>(Url);
 
     public string Url = "/api/Producto";
-    public Data.Respuesta _rpt = new Data.Respuesta();
+    public Data.Respuesta<List<Data.Producto>> _rpt = new Data.Respuesta<List<Data.Producto>>();
 }
