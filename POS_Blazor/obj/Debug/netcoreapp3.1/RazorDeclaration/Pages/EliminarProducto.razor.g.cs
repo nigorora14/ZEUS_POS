@@ -69,22 +69,21 @@ using POS_Blazor.Shared;
 #line hidden
 #nullable disable
 #nullable restore
-#line 4 "C:\NetCore MVC\ZEUS_POS\POS_Blazor\Pages\ProductoForm.razor"
+#line 3 "C:\NetCore MVC\ZEUS_POS\POS_Blazor\Pages\EliminarProducto.razor"
 using System.Net.Http;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 5 "C:\NetCore MVC\ZEUS_POS\POS_Blazor\Pages\ProductoForm.razor"
+#line 4 "C:\NetCore MVC\ZEUS_POS\POS_Blazor\Pages\EliminarProducto.razor"
 using System.Net.Http.Json;
 
 #line default
 #line hidden
 #nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/ProductoForm")]
-    [Microsoft.AspNetCore.Components.RouteAttribute("/ProductoForm/{Id}")]
-    public partial class ProductoForm : Microsoft.AspNetCore.Components.ComponentBase
+    [Microsoft.AspNetCore.Components.RouteAttribute("/EliminarProducto/{Id}")]
+    public partial class EliminarProducto : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -92,39 +91,23 @@ using System.Net.Http.Json;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 85 "C:\NetCore MVC\ZEUS_POS\POS_Blazor\Pages\ProductoForm.razor"
+#line 16 "C:\NetCore MVC\ZEUS_POS\POS_Blazor\Pages\EliminarProducto.razor"
        
-
     [Parameter]
     public string Id { get; set; }
-
-    Data.Producto _prod = new Data.Producto();
     Data.Respuesta<object> _rpt = new Data.Respuesta<object>();
-    Data.Respuesta<Data.Producto> _rpt_prod = new Data.Respuesta<Data.Producto>();
     public string Url = "/api/Producto";
 
-    public async Task GuardarProducto()
+    public void Cancelar() => NavigationManager.NavigateTo("/ProductoView");
+
+    public async Task Eliminar()
     {
-        if (Id != null)
-        {
-            var response = await Http.PutAsJsonAsync<Data.Producto>(Url, _prod);
-            _rpt = response.Content.ReadFromJsonAsync<Data.Respuesta<object>>().Result;
-        }
-        else
-        {
-            var response = await Http.PostAsJsonAsync<Data.Producto>(Url, _prod);
-            _rpt = response.Content.ReadFromJsonAsync<Data.Respuesta<object>>().Result;
-        }
+
+        var response = await Http.DeleteAsync(Url+"/"+Id);
+        _rpt = response.Content.ReadFromJsonAsync<Data.Respuesta<object>>().Result;
+
         //para realizar navegaciones a una ruta especifica.
         NavigationManager.NavigateTo("/ProductoView");
-    }
-    protected override async Task OnInitializedAsync()
-    {
-        if (Id != null)
-        {
-            _rpt_prod = await Http.GetFromJsonAsync<Data.Respuesta<Data.Producto>>(Url + "/" + Id);
-            _prod = _rpt_prod.Data;
-        }
     }
 
 #line default

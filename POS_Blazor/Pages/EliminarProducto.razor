@@ -1,0 +1,33 @@
+﻿@page "/EliminarProducto/{Id}"
+
+@using System.Net.Http
+@using System.Net.Http.Json
+
+@inject HttpClient Http
+@inject NavigationManager NavigationManager
+
+<h3>EliminarProducto</h3>
+<p>Deseas Eliminaz el @Id ?</p>
+<div>
+    <button class="btn btn-primary" @onclick="Cancelar">Cancelar</button>
+    <button class="btn btn-primary" @onclick="Eliminar">Eliminar</button>
+</div>
+
+@code {
+    [Parameter]
+    public string Id { get; set; }
+    Data.Respuesta<object> _rpt = new Data.Respuesta<object>();
+    public string Url = "/api/Producto";
+
+    public void Cancelar() => NavigationManager.NavigateTo("/ProductoView");
+
+    public async Task Eliminar()
+    {
+
+        var response = await Http.DeleteAsync(Url+"/"+Id);
+        _rpt = response.Content.ReadFromJsonAsync<Data.Respuesta<object>>().Result;
+
+        //para realizar navegaciones a una ruta especifica.
+        NavigationManager.NavigateTo("/ProductoView");
+    }
+}

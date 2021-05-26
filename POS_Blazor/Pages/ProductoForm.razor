@@ -94,7 +94,7 @@
 
     public async Task GuardarProducto()
     {
-        if (true)
+        if (Id != null)
         {
             var response = await Http.PutAsJsonAsync<Data.Producto>(Url, _prod);
             _rpt = response.Content.ReadFromJsonAsync<Data.Respuesta<object>>().Result;
@@ -104,8 +104,6 @@
             var response = await Http.PostAsJsonAsync<Data.Producto>(Url, _prod);
             _rpt = response.Content.ReadFromJsonAsync<Data.Respuesta<object>>().Result;
         }
-
-
         //para realizar navegaciones a una ruta especifica.
         NavigationManager.NavigateTo("/ProductoView");
     }
