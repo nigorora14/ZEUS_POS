@@ -9,7 +9,7 @@ namespace POS_Blazor.Data
 {
     public class Producto
     {
-        [Required(ErrorMessage ="El Codigo del Producto es obligatorio")] 
+        [Required(ErrorMessage ="El Codigo del Producto es obligatorio")]
         [StringLength(16, ErrorMessage = "Codigo demasiado largo (15 caracteres como maximo).")]
         public string? IdPro { get; set; } 
         public string Idprovee { get; set; }
