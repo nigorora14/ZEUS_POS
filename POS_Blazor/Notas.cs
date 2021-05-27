@@ -56,6 +56,13 @@ namespace POS_Blazor
         public string Rating { get; set; }
 
         para mas validaciones revisar en: https://docs.microsoft.com/es-es/dotnet/api/system.componentmodel.dataannotations?view=net-5.0
+
+        para publicar en iss
+        https://www.youtube.com/watch?v=m3yPwb9lMjI
+
+        instalar en iis 
+        1-> https://www.microsoft.com/web/downloads/platform.aspx
+        2-> https://www.iis.net/downloads/microsoft/url-rewrite
          */
     }
 }
