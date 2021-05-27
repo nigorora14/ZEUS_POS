@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "uHwSaFBaThCY/aMQRkPCbnD9RNSrAYDhif3z/xEkJas2+AUJ33kCKFwwTiIvCNPq18DzAyHoQqnkYMM/zEMExw==",
+  "dgSpecHash": "LrYbMk3PEy7TjASKR0z35pinV0h22GolwJQuf/tqIiAAoAoWVSKfj4hGA6FiUbxljcRy5N1HnzfSHdjFF753CQ==",
   "success": true,
   "projectFilePath": "C:\\NetCore MVC\\ZEUS_POS\\WebServiceBlazor\\WebServiceBlazor.csproj",
   "expectedPackageFiles": [
@@ -101,7 +101,8 @@
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512",
+    "C:\\Users\\Nilton\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.14\\microsoft.netcore.app.host.win-x64.3.1.14.nupkg.sha512"
   ],
   "logs": []
 }

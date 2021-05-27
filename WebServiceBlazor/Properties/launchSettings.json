@@ -12,7 +12,7 @@
     "IIS Express": {
       "commandName": "IISExpress",
       "launchBrowser": true,
-      "launchUrl": "WeatherForecast",
+      "launchUrl": "api/producto",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
@@ -22,14 +22,14 @@
       "launchBrowser": true,
       "launchUrl": "WeatherForecast",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
+        "ASPNETCORE_ENVIRONMENT": "api/producto"
       },
       "applicationUrl": "https://localhost:5001;http://localhost:5000"
     },
     "Docker": {
       "commandName": "Docker",
       "launchBrowser": true,
-      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}/WeatherForecast",
+      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}/api/producto",
       "publishAllPorts": true,
       "useSSL": true
     }

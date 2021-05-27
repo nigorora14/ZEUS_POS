@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "bIJimAgwW2IJUNKusaCfZpSl8sVXNDS+pIIeZ2HGlgY7rFrtZsyFRbPdmAguQYy7+v2fNGk8855KyB2MBeiG8A==",
+  "dgSpecHash": "B373NjaT+Xc79XAx6aKaDlIpe/84wlM/vGhi94YXM9sJVY5GvI4fvfMVP6LDaVkQYptlaJ/OOIfSxcu+uCW9iw==",
   "success": true,
   "projectFilePath": "C:\\NetCore MVC\\ZEUS_POS\\POS_Blazor\\POS_Blazor.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Nilton\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.10.13\\microsoft.visualstudio.azure.containers.tools.targets.1.10.13.nupkg.sha512",
     "C:\\Users\\Nilton\\.nuget\\packages\\system.net.http.json\\5.0.0\\system.net.http.json.5.0.0.nupkg.sha512",
-    "C:\\Users\\Nilton\\.nuget\\packages\\system.text.json\\5.0.0\\system.text.json.5.0.0.nupkg.sha512"
+    "C:\\Users\\Nilton\\.nuget\\packages\\system.text.json\\5.0.0\\system.text.json.5.0.0.nupkg.sha512",
+    "C:\\Users\\Nilton\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.14\\microsoft.netcore.app.host.win-x64.3.1.14.nupkg.sha512"
   ],
   "logs": []
 }
