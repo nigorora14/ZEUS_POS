@@ -13,6 +13,13 @@ namespace POS_Blazor.Pages
     using System.Threading.Tasks;
     using Microsoft.AspNetCore.Components;
 #nullable restore
+#line 1 "C:\NetCore MVC\ZEUS_POS\POS_Blazor\_Imports.razor"
+using System.Net.Http;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
 #line 2 "C:\NetCore MVC\ZEUS_POS\POS_Blazor\_Imports.razor"
 using Microsoft.AspNetCore.Authorization;
 
@@ -68,20 +75,6 @@ using POS_Blazor.Shared;
 #line default
 #line hidden
 #nullable disable
-#nullable restore
-#line 4 "C:\NetCore MVC\ZEUS_POS\POS_Blazor\Pages\ProductoForm.razor"
-using System.Net.Http;
-
-#line default
-#line hidden
-#nullable disable
-#nullable restore
-#line 5 "C:\NetCore MVC\ZEUS_POS\POS_Blazor\Pages\ProductoForm.razor"
-using System.Net.Http.Json;
-
-#line default
-#line hidden
-#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/ProductoForm")]
     [Microsoft.AspNetCore.Components.RouteAttribute("/ProductoForm/{Id}")]
     public partial class ProductoForm : Microsoft.AspNetCore.Components.ComponentBase
@@ -91,47 +84,6 @@ using System.Net.Http.Json;
         {
         }
         #pragma warning restore 1998
-#nullable restore
-#line 85 "C:\NetCore MVC\ZEUS_POS\POS_Blazor\Pages\ProductoForm.razor"
-       
-
-    [Parameter]
-    public string Id { get; set; }
-
-    Data.Producto _prod = new Data.Producto();
-    Data.Respuesta<object> _rpt = new Data.Respuesta<object>();
-    Data.Respuesta<Data.Producto> _rpt_prod = new Data.Respuesta<Data.Producto>();
-    public string Url = "/api/Producto";
-
-    public async Task GuardarProducto()
-    {
-        if (Id != null)
-        {
-            var response = await Http.PutAsJsonAsync<Data.Producto>(Url, _prod);
-            _rpt = response.Content.ReadFromJsonAsync<Data.Respuesta<object>>().Result;
-        }
-        else
-        {
-            var response = await Http.PostAsJsonAsync<Data.Producto>(Url, _prod);
-            _rpt = response.Content.ReadFromJsonAsync<Data.Respuesta<object>>().Result;
-        }
-        //para realizar navegaciones a una ruta especifica.
-        NavigationManager.NavigateTo("/ProductoView");
-    }
-    protected override async Task OnInitializedAsync()
-    {
-        if (Id != null)
-        {
-            _rpt_prod = await Http.GetFromJsonAsync<Data.Respuesta<Data.Producto>>(Url + "/" + Id);
-            _prod = _rpt_prod.Data;
-        }
-    }
-
-#line default
-#line hidden
-#nullable disable
-        [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager NavigationManager { get; set; }
-        [global::Microsoft.AspNetCore.Components.InjectAttribute] private HttpClient Http { get; set; }
     }
 }
 #pragma warning restore 1591

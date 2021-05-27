@@ -1,118 +1,95 @@
 ﻿@page "/ProductoForm"
 @page "/ProductoForm/{Id}"
-
-@using System.Net.Http
-@using System.Net.Http.Json
-
-@inject HttpClient Http
-@inject NavigationManager NavigationManager
-
-<h3>ProductoForm</h3>
-@*crea el bind de los datos html - @_prod:objeto que se va utilizar para hacer el bind*@
-<EditForm Model="@_prod">
-    <div class="container-fluid">
-        <div class="form-group row mb-1">
-            <label class="col-sm-3">id Prod</label>
-            <div class="col-sm-9">
-                <InputText class="form-control" @bind-Value="@_prod.IdPro"></InputText>
-            </div>
-        </div>
-        <div class="form-group row mb-1">
-            <label class="col-sm-3">id Proveedor</label>
-            <div class="col-sm-9">
-                <InputText class="form-control" @bind-Value="@_prod.Idprovee"></InputText>
-            </div>
-        </div>
-        <div class="form-group row mb-1">
-            <label class="col-sm-3">Descripcion</label>
-            <div class="col-sm-9">
-                <InputText class="form-control" @bind-Value="@_prod.DescripcionLarga"></InputText>
-            </div>
-        </div>
-        <div class="form-group row mb-1">
-            <label class="col-sm-3">Margen de Ganancia</label>
-            <div class="col-sm-9">
-                <InputNumber class="form-control" @bind-Value="@_prod.Frank"></InputNumber>
-            </div>
-        </div>
-        <div class="form-group row mb-1">
-            <label class="col-sm-3">Precio Compra</label>
-            <div class="col-sm-9">
-                <InputNumber class="form-control" @bind-Value="@_prod.PreCompraS"></InputNumber>
-            </div>
-        </div>
-
-        <div class="form-group row mb-1">
-            <label class="col-sm-3">Categoria</label>
-            <div class="col-sm-9">
-                <InputNumber class="form-control" @bind-Value="@_prod.IdCat"></InputNumber>
-            </div>
-        </div>
-        <div class="form-group row mb-1">
-            <label class="col-sm-3">Marca</label>
-            <div class="col-sm-9">
-                <InputNumber class="form-control" @bind-Value="@_prod.IdMarca"></InputNumber>
-            </div>
-        </div>
-        <div class="form-group row mb-1">
-            <label class="col-sm-3">Precio Venta Menor</label>
-            <div class="col-sm-9">
-                <InputNumber class="form-control" @bind-Value="@_prod.PreVntaxMenor"></InputNumber>
-            </div>
-        </div>
-        <div class="form-group row mb-1">
-            <label class="col-sm-3">Unid. Medida</label>
-            <div class="col-sm-9">
-                <InputText class="form-control" @bind-Value="@_prod.UndMedida"></InputText>
-            </div>
-        </div>
-
-        <div class="form-group row mb-1">
-            <label class="col-sm-3">Tipo Producto</label>
-            <div class="col-sm-9">
-                <InputText class="form-control" @bind-Value="@_prod.TipoProdcto"></InputText>
-            </div>
-        </div>
-
-        <div class="form-group row mb-1">
-            <div class="col-sm-12">
-                <button class="btn btn-primary" @onclick="GuardarProducto">Guardar</button>
-            </div>
-        </div>
-    </div>
-</EditForm>
-
-@code {
-
-    [Parameter]
-    public string Id { get; set; }
-
-    Data.Producto _prod = new Data.Producto();
-    Data.Respuesta<object> _rpt = new Data.Respuesta<object>();
-    Data.Respuesta<Data.Producto> _rpt_prod = new Data.Respuesta<Data.Producto>();
-    public string Url = "/api/Producto";
-
-    public async Task GuardarProducto()
-    {
-        if (Id != null)
-        {
-            var response = await Http.PutAsJsonAsync<Data.Producto>(Url, _prod);
-            _rpt = response.Content.ReadFromJsonAsync<Data.Respuesta<object>>().Result;
-        }
-        else
-        {
-            var response = await Http.PostAsJsonAsync<Data.Producto>(Url, _prod);
-            _rpt = response.Content.ReadFromJsonAsync<Data.Respuesta<object>>().Result;
-        }
-        //para realizar navegaciones a una ruta especifica.
-        NavigationManager.NavigateTo("/ProductoView");
+<style>
+    .oculto{
+        display:none
     }
-    protected override async Task OnInitializedAsync()
-    {
-        if (Id != null)
-        {
-            _rpt_prod = await Http.GetFromJsonAsync<Data.Respuesta<Data.Producto>>(Url + "/" + Id);
-            _prod = _rpt_prod.Data;
-        }
+    .visible{
+        display:inherit
     }
-}
+</style>
+
+<h3>Producto</h3>
+
+<div class="alert alert-success @MessageCss" role="alert">
+    <h4 class="alert-heading">Producto Agregado Correctamente</h4>
+    <p>Se agrego el producto: @_prod.DescripcionLarga satisfactoriamente</p>
+    <button class="btn btn-primary" @onclick="Siguiente">Ir a Productos</button>
+</div>
+
+<div class="@FormCss">
+    <EditForm Model="@_prod">
+        <DataAnnotationsValidator />
+        <div class="container-fluid">
+            <div class="form-group row mb-1">
+                <label class="col-sm-3">id Prod</label>
+                <div class="col-sm-9">
+                    <InputText class="form-control" @bind-Value="@_prod.IdPro"></InputText>
+                </div>
+            </div>
+            <div class="form-group row mb-1">
+                <label class="col-sm-3">id Proveedor</label>
+                <div class="col-sm-9">
+                    <InputText class="form-control" @bind-Value="@_prod.Idprovee"></InputText>
+                </div>
+            </div>
+            <div class="form-group row mb-1">
+                <label class="col-sm-3">Descripcion</label>
+                <div class="col-sm-9">
+                    <InputText class="form-control" @bind-Value="@_prod.DescripcionLarga"></InputText>
+                    <ValidationMessage For="(()=>_prod.DescripcionLarga)" />
+                </div>
+            </div>
+            <div class="form-group row mb-1">
+                <label class="col-sm-3">Margen de Ganancia</label>
+                <div class="col-sm-9">
+                    <InputNumber class="form-control" @bind-Value="@_prod.Frank"></InputNumber>
+                    <ValidationMessage For="(()=>_prod.Frank)" />
+                </div>
+            </div>
+            <div class="form-group row mb-1">
+                <label class="col-sm-3">Precio Compra</label>
+                <div class="col-sm-9">
+                    <InputNumber class="form-control" @bind-Value="@_prod.PreCompraS"></InputNumber>
+                    <ValidationMessage For="(()=>_prod.PreCompraS)" />
+                </div>
+            </div>
+            <div class="form-group row mb-1">
+                <label class="col-sm-3">Categoria</label>
+                <div class="col-sm-9">
+                    <InputNumber class="form-control" @bind-Value="@_prod.IdCat"></InputNumber>
+                </div>
+            </div>
+            <div class="form-group row mb-1">
+                <label class="col-sm-3">Marca</label>
+                <div class="col-sm-9">
+                    <InputNumber class="form-control" @bind-Value="@_prod.IdMarca"></InputNumber>
+                </div>
+            </div>
+            <div class="form-group row mb-1">
+                <label class="col-sm-3">Precio Venta Menor</label>
+                <div class="col-sm-9">
+                    <InputNumber class="form-control" @bind-Value="@_prod.PreVntaxMenor"></InputNumber>
+                    <ValidationMessage For="(()=>_prod.PreVntaxMenor)" />
+                </div>
+            </div>
+            <div class="form-group row mb-1">
+                <label class="col-sm-3">Unid. Medida</label>
+                <div class="col-sm-9">
+                    <InputText class="form-control" @bind-Value="@_prod.UndMedida"></InputText>
+                </div>
+            </div>
+            <div class="form-group row mb-1">
+                <label class="col-sm-3">Tipo Producto</label>
+                <div class="col-sm-9">
+                    <InputText class="form-control" @bind-Value="@_prod.TipoProdcto"></InputText>
+                </div>
+            </div>
+            <div class="form-group row mb-1">
+                <div class="col-sm-12">
+                    <button class="btn btn-primary" @onclick="GuardarProducto">Guardar</button>
+                </div>
+            </div>
+        </div>
+    </EditForm>
+</div>

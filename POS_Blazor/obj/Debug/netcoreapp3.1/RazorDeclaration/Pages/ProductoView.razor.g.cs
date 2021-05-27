@@ -91,7 +91,7 @@ using System.Net.Http.Json;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 55 "C:\NetCore MVC\ZEUS_POS\POS_Blazor\Pages\ProductoView.razor"
+#line 56 "C:\NetCore MVC\ZEUS_POS\POS_Blazor\Pages\ProductoView.razor"
        
     protected override async Task OnInitializedAsync() => _rpt = await Http.GetFromJsonAsync<Data.Respuesta<List<Data.Producto>>>(Url);
 
