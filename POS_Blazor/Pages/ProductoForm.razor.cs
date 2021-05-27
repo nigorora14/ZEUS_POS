@@ -16,13 +16,13 @@ namespace POS_Blazor.Pages
         public HttpClient Http { get; set; }
         [Inject]
         public NavigationManager NavigationManager { get; set; }
-
         private string FormCss { get; set; } = "visible";
         private string MessageCss { get; set; } = "oculto";
 
+        public void Siguiente() => NavigationManager.NavigateTo("/ProductoView");
         Data.Producto _prod = new Data.Producto();
         Data.Respuesta<object> _rpt = new Data.Respuesta<object>();
-        Data.Respuesta<Data.Producto> _rpt_prod = new Data.Respuesta<Data.Producto>();
+        Data.Respuesta<Data.Producto> _rpt_prod = new Data.Respuesta<Data.Producto>();       
         public string Url = "/api/Producto";
         public async Task GuardarProducto()
         {
@@ -30,7 +30,7 @@ namespace POS_Blazor.Pages
             {
                 if (Validacion())
                 {
-                    var response = await Http.PutAsJsonAsync(Url, _prod);
+                    var response = await Http.PutAsJsonAsync(Url, _prod);//<Data.Producto>
                     _rpt = response.Content.ReadFromJsonAsync<Data.Respuesta<object>>().Result;
                     if (_rpt.exito == 1)
                     {
@@ -43,7 +43,7 @@ namespace POS_Blazor.Pages
             {
                 if (Validacion())
                 {
-                    var response = await Http.PostAsJsonAsync(Url, _prod);
+                    var response = await Http.PostAsJsonAsync(Url, _prod);//<Data.Producto>
                     _rpt = response.Content.ReadFromJsonAsync<Data.Respuesta<object>>().Result;
 
                     if (_rpt.exito == 1)
@@ -56,8 +56,7 @@ namespace POS_Blazor.Pages
             //para realizar navegaciones a una ruta especifica.
             //NavigationManager.NavigateTo("/ProductoView");
         }
-        public void Siguiente() => NavigationManager.NavigateTo("/ProductoView");
-        protected override async Task OnInitializedAsync()
+        protected override async Task OnInitializedAsync() //se quito el override
         {
             if (Id != null)
             {
@@ -65,6 +64,7 @@ namespace POS_Blazor.Pages
                 _prod = _rpt_prod.Data;
             }
         }
+
         bool Validacion()
         {
             if (_prod.IdPro.Length <= 7)
@@ -83,7 +83,7 @@ namespace POS_Blazor.Pages
             {
                 return false;
             }
-            if (_prod.PreVntaxMenor <= 0 | _prod.PreVntaxMenor==null)
+            if (_prod.PreVntaxMenor <= 0 | _prod.PreVntaxMenor == null)
             {
                 return false;
             }

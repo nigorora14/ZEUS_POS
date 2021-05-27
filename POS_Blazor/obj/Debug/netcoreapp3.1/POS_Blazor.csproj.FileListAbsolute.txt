@@ -54,6 +54,5 @@ C:\NetCore MVC\ZEUS_POS\POS_Blazor\obj\Debug\netcoreapp3.1\RazorDeclaration\Page
 C:\NetCore MVC\ZEUS_POS\POS_Blazor\obj\Debug\netcoreapp3.1\Razor\Pages\ProductoForm.razor.g.cs
 C:\NetCore MVC\ZEUS_POS\POS_Blazor\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\ProductoView.razor.g.cs
 C:\NetCore MVC\ZEUS_POS\POS_Blazor\obj\Debug\netcoreapp3.1\Razor\Pages\ProductoView.razor.g.cs
-C:\NetCore MVC\ZEUS_POS\POS_Blazor\obj\Debug\netcoreapp3.1\POS_Blazor.csprojAssemblyReference.cache
 C:\NetCore MVC\ZEUS_POS\POS_Blazor\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\EliminarProducto.razor.g.cs
 C:\NetCore MVC\ZEUS_POS\POS_Blazor\obj\Debug\netcoreapp3.1\Razor\Pages\EliminarProducto.razor.g.cs

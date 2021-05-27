@@ -4,7 +4,7 @@
 #pragma warning disable 0649
 #pragma warning disable 0169
 
-namespace POS_Blazor.Shared
+namespace POS_Blazor.Pages
 {
     #line hidden
     using System;
@@ -12,13 +12,6 @@ namespace POS_Blazor.Shared
     using System.Linq;
     using System.Threading.Tasks;
     using Microsoft.AspNetCore.Components;
-#nullable restore
-#line 1 "C:\NetCore MVC\ZEUS_POS\POS_Blazor\_Imports.razor"
-using System.Net.Http;
-
-#line default
-#line hidden
-#nullable disable
 #nullable restore
 #line 2 "C:\NetCore MVC\ZEUS_POS\POS_Blazor\_Imports.razor"
 using Microsoft.AspNetCore.Authorization;
@@ -75,7 +68,22 @@ using POS_Blazor.Shared;
 #line default
 #line hidden
 #nullable disable
-    public partial class NavMenu : Microsoft.AspNetCore.Components.ComponentBase
+#nullable restore
+#line 3 "C:\NetCore MVC\ZEUS_POS\POS_Blazor\Pages\ProductoView.razor"
+using System.Net.Http;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 4 "C:\NetCore MVC\ZEUS_POS\POS_Blazor\Pages\ProductoView.razor"
+using System.Net.Http.Json;
+
+#line default
+#line hidden
+#nullable disable
+    [Microsoft.AspNetCore.Components.RouteAttribute("/ProductoView")]
+    public partial class ProductoView : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -83,20 +91,17 @@ using POS_Blazor.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 33 "C:\NetCore MVC\ZEUS_POS\POS_Blazor\Shared\NavMenu.razor"
+#line 56 "C:\NetCore MVC\ZEUS_POS\POS_Blazor\Pages\ProductoView.razor"
        
-    private bool collapseNavMenu = true;
+    protected override async Task OnInitializedAsync() => _rpt = await Http.GetFromJsonAsync<Data.Respuesta<List<Data.Producto>>>(Url);
 
-    private string NavMenuCssClass => collapseNavMenu ? "collapse" : null;
-
-    private void ToggleNavMenu()
-    {
-        collapseNavMenu = !collapseNavMenu;
-    }
+    public string Url = "/api/Producto";
+    public Data.Respuesta<List<Data.Producto>> _rpt = new Data.Respuesta<List<Data.Producto>>();
 
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private HttpClient Http { get; set; }
     }
 }
 #pragma warning restore 1591
