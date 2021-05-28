@@ -32,14 +32,14 @@ namespace POS_Blazor
             services.AddSingleton<WeatherForecastService>();
 
             //Para omitir el certificado
-            var httpClientHandler = new HttpClientHandler();
-            httpClientHandler.ServerCertificateCustomValidationCallback = (message, cert, chain, errors) => true;
+            //var httpClientHandler = new HttpClientHandler();
+            //httpClientHandler.ServerCertificateCustomValidationCallback = (message, cert, chain, errors) => true;
             //fin
             
             //para minimizar la ruta - buena practica
             services.AddSingleton(new HttpClient
             {
-                BaseAddress= new Uri("https://localhost:5001")
+                BaseAddress= new Uri("https://apizeus.azurewebsites.net")
             });
         }
 

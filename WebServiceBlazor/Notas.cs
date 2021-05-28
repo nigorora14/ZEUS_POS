@@ -36,8 +36,14 @@ namespace WebServiceBlazor
         
         QUINTO: update-datebase -Context AppDbContext
         
-        *****************************MIGRAR********************************
+        *****************************FIN MIGRAR********************************
+        *****************************PUBLICAR********************************
+        ENTRAR A AZURE
+        CREAR UN RECURSO
+        luego crear Web App
 
+         
+        *****************************FIN PUBLICAR********************************
 
 
 

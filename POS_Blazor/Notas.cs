@@ -63,6 +63,9 @@ namespace POS_Blazor
         instalar en iis 
         1-> https://www.microsoft.com/web/downloads/platform.aspx
         2-> https://www.iis.net/downloads/microsoft/url-rewrite
+
+        usuario de azure la misma que del visual niltongr@outlook.com
+        crear web app y una base de datos 
          */
     }
 }
